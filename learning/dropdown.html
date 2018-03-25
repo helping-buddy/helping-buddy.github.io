@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dropdown</title>
+	<style type="text/css">
+		html,body{
+			height: 100%;
+			margin: 0px;
+		}
+		.menu-list{
+			height: 100%;
+			width: 260px;
+			background-color: #EEE;
+			overflow: auto;
+			display: block;
+			list-style: none;
+			padding: 0px;
+			margin: 0px;
+		}
+		.menu-list-item,.submenu-list-item{
+			min-height: 40px;
+			width: 100%;
+		}
+		.menu-list-item-btn, .submenu-list-item-btn{
+			height: 30px;
+			width: 100%;
+			border: none;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+		.menu-list-item-btn>button, .submenu-list-item-btn>button {
+			cursor: pointer;
+			height: 100%;
+			width: 100%;
+			border: none;
+			margin: 0px;
+			padding: 0px;
+			background-color: transparent;
+		}
+		.submenu-list{
+			width: 100%;
+			display: block;
+			list-style: none;
+			margin: 0px;
+			padding: 0px;
+			background-color: rgba(0,0,0,.1);
+			padding-left: 20px;
+			overflow: hidden;
+			visibility: visible;
+		}
+		.submenu-list[aria-hidden='true']{
+			height: 0px;
+			visibility: hidden;
+		}
+	</style>
+</head>
+<body>
+	<ul class="menu-list">
+		<li class="menu-list-item">
+			<div class="menu-list-item-btn">
+				<button onclick="onMenuToggle(event)"> 1st Semester</button>
+			</div>
+			<ul class="submenu-list" aria-hidden="true">
+				<li class="submenu-list-item">
+					<div class="submenu-list-item-btn"><a href="#">Mathematics</a></div>
+				</li>
+				<li class="submenu-list-item">
+					<div class="submenu-list-item-btn"><a href="#">Physics</a></div>
+				</li>
+				<li class="submenu-list-item">
+					<div class="submenu-list-item-btn"><a href="#">chemistery</a></div>
+				</li>
+			</ul>
+		</li>
+		<li class="menu-list-item">
+			<div class="menu-list-item-btn">
+				<button onclick="onMenuToggle(event)"> 2st Semester</button>
+			</div>
+			<ul class="submenu-list" aria-hidden="true">
+				<li class="submenu-list-item">
+					<div class="submenu-list-item-btn"><a href="#">Mathematics</a></div>
+				</li>
+				<li class="submenu-list-item">
+					<div class="submenu-list-item-btn"><a href="#">Physics</a></div>
+				</li>
+				<li class="submenu-list-item">
+					<div class="submenu-list-item-btn"><a href="#">chemistery</a></div>
+				</li>
+			</ul>
+		</li>
+		<li class="menu-list-item">
+			<div class="menu-list-item-btn">
+				<button onclick="onMenuToggle(event)"> 2st Semester</button>
+			</div>
+			<ul class="submenu-list" aria-hidden="true">
+				<li class="submenu-list-item">
+					<div class="submenu-list-item-btn"><a href="#">Mathematics</a></div>
+				</li>
+				<li class="submenu-list-item">
+					<div class="submenu-list-item-btn"><a href="#">Physics</a></div>
+				</li>
+				<li class="submenu-list-item">
+					<div class="submenu-list-item-btn"><a href="#">chemistery</a></div>
+				</li>
+			</ul>
+		</li>
+		<li class="menu-list-item">
+			<div class="menu-list-item-btn">
+				<button onclick="onMenuToggle(event)"> 2st Semester</button>
+			</div>
+			<ul class="submenu-list" aria-hidden="true">
+				<li class="submenu-list-item">
+					<div class="submenu-list-item-btn"><a href="#">Mathematics</a></div>
+				</li>
+				<li class="submenu-list-item">
+					<div class="submenu-list-item-btn"><a href="#">Physics</a></div>
+				</li>
+				<li class="submenu-list-item">
+					<div class="submenu-list-item-btn"><a href="#">chemistery</a></div>
+				</li>
+			</ul>
+		</li>
+		<li class="menu-list-item">
+			<div class="menu-list-item-btn">
+				<button onclick="onMenuToggle(event)"> 2st Semester</button>
+			</div>
+			<ul class="submenu-list" aria-hidden="true">
+				<li class="submenu-list-item">
+					<div class="submenu-list-item-btn"><button>Mathematics</button></div>
+				</li>
+				<li class="submenu-list-item">
+					<div class="submenu-list-item-btn"><a href="#">Physics</a></div>
+				</li>
+				<li class="submenu-list-item">
+					<div class="submenu-list-item-btn"><a href="#">chemistery</a></div>
+				</li>
+			</ul>
+		</li>
+		<li class="menu-list-item">
+			<div class="menu-list-item-btn">
+				<button onclick="onMenuToggle(event)"> 2st Semester</button>
+			</div>
+			<ul class="submenu-list" aria-hidden="true">
+				<li class="submenu-list-item">
+					<div class="submenu-list-item-btn"><a href="#">Mathematics</a></div>
+				</li>
+				<li class="submenu-list-item">
+					<div class="submenu-list-item-btn"><a href="#">Physics</a></div>
+				</li>
+				<li class="submenu-list-item">
+					<div class="submenu-list-item-btn"><a href="#">chemistery</a></div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<script type="text/javascript">
+		function onMenuToggle(event){
+			var target = event.target.parentElement.nextElementSibling;
+			var currentState = target.getAttribute("aria-hidden");
+			var nextState = currentState === "true"?false:true;
+			target.setAttribute("aria-hidden", nextState);
+		}
+	</script>
+</body>
+</html>

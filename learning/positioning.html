@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Positioning</title>
+	<style type="text/css">
+		.position-relative{
+			position: relative;
+			height: 500px;
+			width: 1000px;
+			background-color: #EEE;
+		}
+		.position-relative>div{
+			color: #FFF;
+			height: 200px;
+			width: 200px;
+			/*position: absolute;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="position-relative">
+		<div class="position-absolute" style="background-color: red;">1</div>
+		<div class="position-absolute" style="background-color: blue;left: 100px;top: 100px;">2</div>
+		<div class="position-absolute" style="background-color: green;left: 200px;top: 200px">3</div>
+	</div>
+</body>
+</html>

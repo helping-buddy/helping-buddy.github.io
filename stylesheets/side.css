@@ -1,0 +1,82 @@
+.menu-list{
+			height: 100%;
+			width: 100%;
+			/*background-color: #EEE;*/
+			overflow: auto;
+			display: block;
+			list-style: none;
+			padding: 0px;
+			margin: 0px;
+		}
+		.menu-list-item,.submenu-list-item{
+			min-height: 40px;
+			width: 100%;
+			
+		}
+		.menu-list-item-btn, .submenu-list-item-btn{
+			height: 30px;
+			width: 100%;
+			border: none;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			align-items: center;
+		}
+		.menu-list-item-btn>button{
+			cursor: pointer;
+			height: 100%;
+			width: 100%;
+			border: none;
+			margin: 0px;
+			padding: 0px;
+			background-color: transparent;
+			font-size: 20px;
+			font-style: italic;
+		}
+		 .submenu-list-item-btn>button{
+		 	cursor: pointer;
+			height: 100%;
+			width: 100%;
+			border: none;
+			margin: 0px;
+			padding: 0px;
+			padding-right: 15%;
+			background-color: transparent;
+			font-size: 18px;
+
+
+		 }
+		 .submenu-list-item-btn>button>a{
+		 	text-decoration: none;
+		 	color :black;
+
+
+		 }
+		.submenu-list{
+			width: 100%;
+			display: block;
+			list-style: none;
+			margin: 0px;
+			padding: 0px;
+			background-color: rgba(0,0,0,.1);
+			padding-left: 20px;
+			overflow: hidden;
+			visibility: visible;
+		}
+		.submenu-list[aria-hidden='true']{
+			height: 0px;
+			visibility: hidden;
+		}
+		.side-list{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			display: flex;
+			flex-direction: column;
+		    background-color: #D3D3D3;
+			width: 260px;
+			align-items: center;
+			font-size: 25px;
+		}
